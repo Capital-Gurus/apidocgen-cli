@@ -1,8 +1,8 @@
 {
-  "name": "apidocgen",
+  "name": "capital-gurus-ai-doc-gen",
   "version": "0.1.0",
   "type": "module",
-  "description": "ApiDocGen CLI — sync your OpenAPI spec with ApiDocGen and generate AI-powered API documentation",
+  "description": "AI-powered API documentation CLI — sync your OpenAPI spec with ApiDocGen and generate rich docs with code snippets in 9 languages",
   "keywords": [
     "openapi",
     "swagger",
