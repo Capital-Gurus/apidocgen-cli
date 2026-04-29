@@ -1,25 +1,28 @@
-# apidocgen
+# capital-gurus-ai-doc-gen
 
 **AI-powered API documentation CLI.** Sync your OpenAPI spec with [ApiDocGen](https://api-doc-gen.fly.dev) and get rich documentation with code snippets in 9 languages.
 
 ## Install
 
 ```bash
-npx apidocgen setup
+npx capital-gurus-ai-doc-gen setup
 ```
 
 Or install globally:
 
 ```bash
-npm install -g apidocgen
+npm install -g capital-gurus-ai-doc-gen
+apidocgen setup
 ```
+
+> **Note:** The npm package is `capital-gurus-ai-doc-gen` but the CLI command is `apidocgen`. When using `npx`, use the full package name. When installed globally, use `apidocgen`.
 
 ## Quick start
 
 From your API project directory, run:
 
 ```bash
-npx apidocgen setup
+npx capital-gurus-ai-doc-gen setup
 ```
 
 The interactive setup will:
@@ -34,21 +37,21 @@ After setup, your docs are live at `https://api-doc-gen.fly.dev/docs/YOUR-SLUG`.
 
 ## Commands
 
-### `apidocgen setup`
+### `npx capital-gurus-ai-doc-gen setup`
 
 Interactive first-time setup. Walks you through account creation, project setup, and initial sync.
 
-### `apidocgen sync`
+### `npx capital-gurus-ai-doc-gen sync`
 
 Sync your current `openapi.json` with ApiDocGen. Run this every time your API changes. Only re-processes endpoints that actually changed.
 
-### `apidocgen register`
+### `npx capital-gurus-ai-doc-gen register`
 
 Create an ApiDocGen account (without creating a project). Useful if you want to just get an API key.
 
 ## Configuration
 
-`apidocgen setup` creates a `.apidocgen.yml` file:
+The setup creates a `.apidocgen.yml` file:
 
 ```yaml
 api_url: https://api-doc-gen.fly.dev
@@ -80,12 +83,12 @@ node -e "require('fs').writeFileSync('openapi.json', JSON.stringify(require('./s
 
 ## Automating sync
 
-Add `apidocgen sync` to your CI/CD pipeline or npm scripts to keep docs automatically updated:
+Add sync to your CI/CD pipeline or npm scripts to keep docs automatically updated:
 
 ```json
 {
   "scripts": {
-    "predev": "curl -s http://localhost:8000/api-docs-json > openapi.json && apidocgen sync || true",
+    "predev": "curl -s http://localhost:8000/api-docs-json > openapi.json && npx capital-gurus-ai-doc-gen sync || true",
     "dev": "nest start --watch"
   }
 }
@@ -97,7 +100,7 @@ Or as a GitHub Action:
 - name: Sync API docs
   run: |
     curl -s http://localhost:8000/api-docs-json > openapi.json
-    npx apidocgen sync
+    npx capital-gurus-ai-doc-gen sync
   env:
     APIDOCGEN_API_KEY: ${{ secrets.APIDOCGEN_API_KEY }}
 ```
@@ -122,6 +125,7 @@ curl -H "x-api-key: YOUR_KEY" \
 
 ## Links
 
+- **npm:** https://www.npmjs.com/package/capital-gurus-ai-doc-gen
 - **ApiDocGen API:** https://api-doc-gen.fly.dev
 - **Swagger UI:** https://api-doc-gen.fly.dev/api-docs
 - **GitHub:** https://github.com/Capital-Gurus/apidocgen-cli
