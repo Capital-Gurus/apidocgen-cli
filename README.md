@@ -2,21 +2,6 @@
 
 **AI-powered API documentation CLI.** Sync your OpenAPI spec with [ApiDocGen](https://api-doc-gen.fly.dev) and get rich documentation with code snippets in 9 languages.
 
-## Install
-
-```bash
-npx capital-gurus-ai-doc-gen setup
-```
-
-Or install globally:
-
-```bash
-npm install -g capital-gurus-ai-doc-gen
-apidocgen setup
-```
-
-> **Note:** The npm package is `capital-gurus-ai-doc-gen` but the CLI command is `apidocgen`. When using `npx`, use the full package name. When installed globally, use `apidocgen`.
-
 ## Quick start
 
 From your API project directory, run:
@@ -24,6 +9,8 @@ From your API project directory, run:
 ```bash
 npx capital-gurus-ai-doc-gen setup
 ```
+
+> **Note:** The npm package is `capital-gurus-ai-doc-gen` but the CLI command is `apidocgen`. If you install it globally with `npm install -g capital-gurus-ai-doc-gen`, you can use the shorter `apidocgen setup`.
 
 The interactive setup will:
 
